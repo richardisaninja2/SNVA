@@ -36,8 +36,19 @@
             let lName = document.forms["myForm"]["lName"].value;
             let email = document.forms["myForm"]["email"].value;
             
+            let message = "";
+
             if(fName=="" || lName=="" || email == ""){
-                alert("you are missing a field")  
+                if(fName == ""){
+                    message += "First Name is empty\n";
+                }
+                if(lName == ""){
+                    message += "Last Name is empty \n";
+                }
+                if(email == ""){
+                    message += "email is empty \n";
+                }
+                alert(message)  
                 return false;
             }else{
                 alert("thanks for submitting the form... press okay to go back")
