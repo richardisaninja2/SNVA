@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="responsiveTable.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<style>
+    table, th, td {
+      border:1px solid black;
+    }
+    td{
+        text-align: center;
+    }
+    </style>
+<body>
+    <div>
+        <div id = "basic">
+            <h2 id="basicName"></h2>
+            <h1 id="basicPrice"></h1>
+            <button className="button">Start Trial</button>
+            <p id="basicIncludes"></p>
+        </div>
+
+        <div id="business">
+            <h2 id="businessName"></h2>
+            <h1 id="businessPrice"></h1>
+            <button className="button">Start Trial</button>
+            <p id="businessIncludes"></p>
+        </div>
+        <div id="expert">
+            <h2 id="expertName"></h2>
+            <h1 id="expertPrice"></h1>
+            <button className="button">Start Trial</button>
+            <p id="expertIncludes"></p>
+        </div>
+    </div>
+</body>
+<script>
+
+    const basic = {
+        name: "Basic",
+        price: 30,
+        includes: ["email addresses", "phone numbers", "unlimited texts"]
+    }
+    const business= {
+        name: "Business",
+        price: 65,
+        includes: ["email addresses", "phone numbers", "unlimited texts", "export contacts", "50MB file attachments"]
+    }
+    const expert= {
+        name: "Expert",
+        price: 125,
+        includes: ["email addresses", "phone numbers", "unlimited texts", "export contacts", "50MB file attachments", "expert analytics"]
+    }
+
+        document.getElementById("basicName").innerHTML = basic.name;
+        document.getElementById("basicPrice").innerHTML = "$"+basic.price;
+        //loop through the includses array and create a new p tag for each element
+        for(let i = 0; i<basic.includes.length; i++){
+            let newTag = document.createElement("p");
+            let text = document.createTextNode("\u2713 "+basic.includes[i]);
+            newTag.appendChild(text);
+
+            let element = document.getElementById("basic");
+            element.appendChild(newTag);
+
+            console.log(basic.includes[i]);
+        }
+
+
+        document.getElementById("businessName").innerHTML = business.name;
+        document.getElementById("businessPrice").innerHTML = "$"+business.price;
+
+        for(let i = 0; i<business.includes.length; i++){
+            let newTag = document.createElement("p");
+            let text = document.createTextNode("\u2713 "+business.includes[i]);
+            newTag.appendChild(text);
+
+            let element = document.getElementById("business");
+            element.appendChild(newTag);
+
+            console.log(basic.includes[i]);
+        }
+
+        document.getElementById("expertName").innerHTML = expert.name;
+        document.getElementById("expertPrice").innerHTML = "$"+expert.price;
+        for(let i = 0; i<expert.includes.length; i++){
+            let newTag = document.createElement("p");
+            let text = document.createTextNode("\u2713 "+expert.includes[i]);
+            newTag.appendChild(text);
+
+            let element = document.getElementById("expert");
+            element.appendChild(newTag);
+
+            console.log(basic.includes[i]);
+        }
+
+
+</script>
+</html>
