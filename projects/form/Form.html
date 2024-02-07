@@ -9,6 +9,7 @@
 <body>
     <form id="form" name="myForm" class="contactUs" onSubmit="return submissionHandler()">
         <div class="line1">
+            
             <input  name="fName" value="" placeholder="First Name"/>
             <input name="lName" value="" placeholder="Last Name"/>
         </div>
@@ -16,6 +17,35 @@
             <input name="email" type="email" value="" placeholder="email"/>
         </div>
         <br/>
+        <div id="buttons">
+            <div>
+                <label for="Gender"> Gender</label><br>
+                <input type="radio" id="male" name="sex" value="MALE">
+                <label for="male">Male</label>
+                <br/>
+                <input type="radio" id="female" name="sex" value="FEMALE">
+                <label for="female">Female</label>
+            </div>
+            <div>
+                <label for="Gender"> Emotion</label><br>
+                <input type="checkbox" name="emotion" value="Angry">
+                <label for="emotion"> Angry</label><br>
+
+                <input type="checkbox" name="Happy" value="Happy">
+                <label for="emotion"> Happy</label>
+            </div>
+            <div>
+                <label for="location">Choose Location:</label>
+                    <select id="location" name="cars">
+                        <option value="Atlanta">Atlanta</option>
+                        <option value="Chicago">Chicago</option>
+                        <option value="Dallas">Dallas</option>
+                    </select>
+                    <br>
+                    <input type="file" id="myFile" name="filename"> 
+            </div>
+        </div>
+        
         <div class="text">
             <textarea name="comments" value="" placeholder="Leave us a few words"></textarea>
         </div>
@@ -29,7 +59,7 @@
     function submissionHandler(){
         let form = document.getElementById('form')
         form.addEventListener('submit', e => {
-            e.preventDefault();
+            
         })
 
             let fName = document.forms["myForm"]["fName"].value;
