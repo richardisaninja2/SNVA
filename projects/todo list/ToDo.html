@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="ToDo.css"/>
+
+</head>
+<body>
+
+    <div class="mainContainer">
+        <!-- <aside id="sidebar">
+            <ul id="category">
+
+                <li>Add New List</li>
+            </ul>
+        </aside> -->
+        <div id="content">
+            <img id="img" src="checklist.avif">
+            <div class="content">
+                <form id="form" onSubmit="checkForInput()">
+                    <label for="taskName">Task Name:</label>
+                    <input type="text" name="taskName" placeholder="Task Name">
+                    <div class="addedMargin">
+                        <label for="yes">Completed: </label>
+                        <br id="show">
+                        <label for="yes">Yes</label>
+                        <input type="radio" id="yes" name="decision" value="yes">
+                        <label for="no">No</label>
+                        <input type="radio" id="no" name="decision" value="no">
+                    
+                    <input type="submit" value="Submit"/>
+                    </div>
+
+                    <br>
+                </form>
+                <div class="topFormSection">
+                    <form id="selectForm">
+                        <label for="filter">Filter Tasks:</label>
+                        <br>
+                        <select id="select" name="filter">
+                            <option value="all">All Tasks</option>
+                            <option value="yes">Compeleted Tasks</option>
+                            <option value="no">InCompelete Tasks</option>
+                        </select>
+                    </form>
+
+                    <ul id="items">
+                        
+                    </ul> 
+                    
+                    <div> 
+                        <form id="taskToDelete" onSubmit="deleteFromFormOption()">
+                            <label for="toDelete">Delete a Task</label>
+                            <select id="toDelete" name="toDelete">
+                            </select>
+                            <input type="submit" value="Submit"/>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            
+
+        </div>
+    </div>
+</body>
+<script src="ToDo.js"></script>
+<script>
+
+
+        
+</script>
+</html>
